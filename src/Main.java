@@ -18,5 +18,8 @@ public class Main {
 
 //        System.out.println(s.distance());
         System.out.println(s.toSVG());
+
+        Style temp = new Style("aa","bb",1234);
+        System.out.println(temp.toSvg());
     }
 }
