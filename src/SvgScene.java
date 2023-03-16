@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SvgScene {
+    private static SvgScene instance = null;
+
     private List<Shape> shapes = new ArrayList<>();
     public void add(Shape polygon){
         shapes.add(polygon);
@@ -23,6 +25,11 @@ public class SvgScene {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
 
+    public void setInstance(SvgScene instance){
+        if (this.instance==null){
+            this.instance = instance;
+        }
     }
 }
