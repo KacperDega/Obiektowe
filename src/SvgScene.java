@@ -2,7 +2,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 public class SvgScene {
     private List<Shape> shapes = new ArrayList<>();
     public void add(Shape polygon){
@@ -19,13 +18,9 @@ public class SvgScene {
                     "\n" +
                     "</body>\n" +
                     "</html>");
-//            for(int i =0;i<shapes.size();++i){
-//                shapes.get(i);
-//            }
             fw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 }
